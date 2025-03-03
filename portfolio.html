@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Envision Studio</title>
+  <meta name="description" content="Explore our portfolio of digital projects and case studies.">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ==== GLOBAL STYLES ==== */
+    :root {
+      --primary-color: #5f65ff;
+      --primary-dark: #4a4fdb;
+      --secondary-color: #ff6b6b;
+      --accent-color: #00d9b5;
+      --text-color: #333333;
+      --text-light: #7a7a7a;
+      --bg-color: #ffffff;
+      --bg-light: #f8f9fa;
+      --bg-dark: #222232;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+      --border-radius: 8px;
+      --transition: all 0.3s ease;
+      --section-padding: 80px 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      overflow-x: hidden;
+    }
+
+    /* ==== NAVIGATION ==== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: transparent;
+      padding: 20px 0;
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled {
+      background-color: white;
+      box-shadow: var(--shadow-sm);
+      padding: 15px 0;
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled .logo {
+      color: var(--text-color);
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .logo-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li {
+      margin: 0 15px;
+    }
+
+    .nav-menu a {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+      position: relative;
+      padding: 5px 0;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled .nav-menu a {
+      color: var(--text-color);
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-color);
+      transition: var(--transition);
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: white;
+    }
+
+    .navbar.scrolled .nav-menu a:hover,
+    .navbar.scrolled .nav-menu a.active {
+      color: var(--primary-color);
+    }
+
+    .nav-cta {
+      background-color: var(--accent-color);
+      color: var(--bg-dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      margin-left: 15px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .nav-cta:hover {
+      background-color: #00c3a2;
+      transform: translateY(-3px);
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled .nav-toggle span {
+      background-color: var(--text-color);
+    }
+
+    /* ==== PAGE HEADER ==== */
+    .page-header {
+      background-color: var(--primary-color);
+      padding: 150px 0 80px;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('images/pattern.svg');
+      opacity: 0.05;
+    }
+
+    .breadcrumbs {
+      display: inline-block;
+      margin-top: 15px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .breadcrumbs a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      color: white;
+    }
+
+    /* ==== PORTFOLIO SECTION ==== */
+    .portfolio-section {
+      padding: var(--section-padding);
+      background-color: var(--bg-light);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header .section-tag {
+      display: inline-block;
+      background-color: rgba(95, 101, 255, 0.1);
+      color: var(--primary-color);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent-color);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-header p {
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .portfolio-item {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .portfolio-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-image img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .portfolio-item:hover .portfolio-image img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+      opacity: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px;
+      transition: var(--transition);
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-content {
+      transform: translateY(20px);
+      transition: transform 0.4s ease;
+      color: white;
+    }
+
+    .portfolio-item:hover .portfolio-content {
+      transform: translateY(0);
+    }
+
+    .portfolio-content h3 {
+      margin-bottom: 5px;
+    }
+
+    .portfolio-content p {
+      margin-bottom: 15px;
+      opacity: 0.8;
+    }
+
+    .portfolio-cta {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* ==== FOOTER ==== */
+    .footer {
+      background-color: var(--bg-dark);
+      color: white;
+      padding: 80px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .footer-info {
+      padding-right: 20px;
+    }
+
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: white;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+
+    .footer p {
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .social-links i {
+      color: white;
+      font-size: 1rem;
+    }
+
+    .footer-nav h3,
+    .footer-services h3,
+    .footer-contact h3 {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      color: white;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer ul li a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer ul li a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+
+    .footer-contact p {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+
+    .footer-contact i {
+      margin-right: 15px;
+      margin-top: 5px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-bottom p {
+      margin-bottom: 0;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+    }
+
+    .footer-legal a:hover {
+      color: white;
+    }
+
+    /* ==== BACK TO TOP ==== */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transition);
+      border: none;
+      z-index: 99;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-5px);
+    }
+
+    /* ==== MEDIA QUERIES ==== */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        box-shadow: var(--shadow-md);
+        z-index: 100;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+      }
+
+      .nav-menu.open {
+        transform: translateX(0);
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preloader (Optional) -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Envision</span>
+        <span class="logo-dot"></span>
+      </a>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Portfolio</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> / <span>Portfolio</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Work</span>
+        <h2>Recent Projects</h2>
+        <p>Explore our latest digital projects and case studies.</p>
+      </div>
+      <div class="portfolio-grid">
+        <!-- Portfolio Item 1 -->
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <img src="images/i1.jpg" alt="Project 1">
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3>Project One</h3>
+                <p>Web Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 2 -->
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <img src="images/i2.jpg" alt="Project 2">
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3>Project Two</h3>
+                <p>UI/UX Design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 3 -->
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <img src="images/i3.jpg" alt="Project 3">
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3>Project Three</h3>
+                <p>Digital Marketing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 4 -->
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <img src="images/i4.jpg" alt="Project 4">
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3>Project Four</h3>
+                <p>Branding</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-cta">
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="index.html" class="footer-logo">
+            <span class="logo-text">Envision</span>
+            <span class="logo-dot"></span>
+          </a>
+          <p>We create digital experiences that stand out and drive results.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h3>Site Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html#web-development">Web Development</a></li>
+            <li><a href="services.html#ui-ux-design">UI/UX Design</a></li>
+            <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+            <li><a href="services.html#consulting">Consulting</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City, 10001</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> hello@envisionstudio.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Envision Studio. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

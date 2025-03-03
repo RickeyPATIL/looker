@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Envision Studio | Digital Agency</title>
+  <meta name="description" content="A digital agency delivering creative solutions for brands that want to stand out.">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-ABC1234');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYZ9876"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XYZ9876');
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ABC1234"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Envision</span>
+        <span class="logo-dot"></span>
+      </a>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="reveal-text">Crafting Digital <span class="accent">Experiences</span></h1>
+        <p class="subtitle reveal-text delay-1">
+          We transform innovative ideas into exceptional digital realities that captivate and convert.
+        </p>
+        <div class="hero-buttons reveal-text delay-2">
+          <a href="portfolio.html" class="btn btn-primary" onclick="trackButtonClick('View Portfolio')">View Portfolio</a>
+          <a href="contact.html" class="btn btn-secondary" onclick="trackButtonClick('Get Started')">Get Started</a>
+        </div>
+        <img src="images/Home.svg" alt="Digital design illustration">
+      </div>
+      <div class="hero-image reveal-image">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <div class="arrow">
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="services-overview" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Offer</span>
+        <h2>Our Services</h2>
+        <p>Comprehensive digital solutions tailored to your unique business needs</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Web Development</h3>
+          <p>Custom websites and applications built with the latest technologies and responsive design.</p>
+          <a href="services.html#web-development" class="service-link">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>User-centered design solutions that enhance user experience and drive engagement.</p>
+          <a href="services.html#ui-ux-design" class="service-link">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Digital Marketing</h3>
+          <p>Strategic marketing campaigns that increase visibility and drive qualified traffic.</p>
+          <a href="services.html#digital-marketing" class="service-link">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3>Branding</h3>
+          <p>Comprehensive brand strategy and identity design to make your business memorable.</p>
+          <a href="services.html#branding" class="service-link">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="about-preview">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="images/standing-1.svg" alt="Our team working together">
+          <div class="experience-badge">
+            <span class="years">10+</span>
+            <span class="text">Years of Experience</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-tag">About Us</span>
+          <h2>We're a team of creative problem-solvers</h2>
+          <p>
+            Founded in 2015, our agency has helped over 200 clients achieve their digital goals.
+            We combine strategic thinking with technical expertise to deliver solutions that drive real business results.
+          </p>
+          <div class="stats-container">
+            <div class="stat-item">
+              <span class="stat-number" data-count="200">0</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="350">0</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="15">0</span>
+              <span class="stat-label">Team Members</span>
+            </div>
+          </div>
+          <a href="about.html" class="btn btn-primary">More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Process</span>
+        <h2>See How We Work</h2>
+      </div>
+      <!-- Video Container with poster image and play button overlay -->
+      <div class="video-container" id="videoContainer" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <div class="video-overlay" id="videoOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">
+          <button class="play-button" id="playButton" style="width: 80px; height: 80px; background-color: #5f65ff; border: none; border-radius: 50%; color: white; font-size: 2rem; cursor: pointer;">
+            <i class="fas fa-play"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Preview -->
+  <section class="portfolio-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Work</span>
+        <h2>Featured Projects</h2>
+        <p>A selection of our recent work across various industries</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <img src="images/i1.jpg" alt="E-commerce Website">
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3>Modern E-commerce Platform</h3>
+                <p>Web Development, UI/UX Design</p>
+                <a href="portfolio.html" class="btn btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <img src="images/i2.jpg" alt="Mobile App Design">
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3>Fitness Tracking App</h3>
+                <p>Mobile App, UI/UX Design</p>
+                <a href="portfolio.html" class="btn btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <img src="images/i3.jpg" alt="Brand Identity">
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3>Restaurant Brand Identity</h3>
+                <p>Branding, Graphic Design</p>
+                <a href="portfolio.html" class="btn btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-cta">
+        <a href="portfolio.html" class="btn btn-secondary">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="testimonial-slider" id="testimonialSlider">
+        <!-- Testimonial Slide 1 -->
+        <div class="testimonial-slide active">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              Envision Studio transformed our online presence completely. Their team delivered a website that not only looks beautiful but converts visitors into customers.
+            </p>
+            <div class="testimonial-author">
+              <img src="images/i5.jpg" alt="Sarah Johnson">
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <p>CEO, TechStart Inc.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial Slide 2 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              Working with Envision was a game-changer for our brand. Their strategic approach to our digital marketing has increased our leads by 150% in just 3 months.
+            </p>
+            <div class="testimonial-author">
+              <img src="images/i6.jpg" alt="Michael Clark">
+              <div class="author-info">
+                <h4>Michael Clark</h4>
+                <p>Marketing Director, Horizon Group</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial Slide 3 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              The team at Envision Studio brought our vision to life with impressive attention to detail. Their UI/UX expertise made our app intuitive and engaging for our users.
+            </p>
+            <div class="testimonial-author">
+              <img src="images/i7.jpg" alt="Jennifer Lee">
+              <div class="author-info">
+                <h4>Jennifer Lee</h4>
+                <p>Product Manager, HealthApp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial Carousel Controls -->
+      <div class="testimonial-controls">
+        <button class="testimonial-arrow prev" id="prevTestimonial">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="testimonial-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+        <button class="testimonial-arrow next" id="nextTestimonial">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to start your project?</h2>
+        <p>Let's discuss how we can help bring your vision to life</p>
+        <a href="contact.html" class="btn btn-light" onclick="trackButtonClick('Contact Us CTA')">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="index.html" class="footer-logo">
+            <span class="logo-text">Envision</span>
+            <span class="logo-dot"></span>
+          </a>
+          <p>We create digital experiences that stand out and drive results.</p>
+          <div class="social-links">
+            <a href="#" onclick="trackOutboundLinkClick(this)" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" onclick="trackOutboundLinkClick(this)" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" onclick="trackOutboundLinkClick(this)" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" onclick="trackOutboundLinkClick(this)" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h3>Site Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html#web-development">Web Development</a></li>
+            <li><a href="services.html#ui-ux-design">UI/UX Design</a></li>
+            <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+            <li><a href="services.html#consulting">Consulting</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City, 10001</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> hello@envisionstudio.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Envision Studio. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-content">
+      <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+      <div class="cookie-buttons">
+        <button id="acceptCookies" class="btn btn-sm btn-primary">Accept</button>
+        <button id="cookieSettings" class="btn btn-sm btn-outline">Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inline JavaScript for Video Section (if used elsewhere on the page) -->
+  <script>
+    // If a video section exists and has a play button with id "playButton"
+    if(document.getElementById('playButton')) {
+      document.getElementById('playButton').addEventListener('click', function () {
+        var videoContainer = document.getElementById('videoContainer');
+        if(videoContainer) {
+          videoContainer.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/D0UnqGm_miA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>';
+        }
+      });
+    }
+  </script>
+
+  <!-- Testimonial Carousel JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.getElementById('testimonialSlider');
+      const slides = slider.querySelectorAll('.testimonial-slide');
+      const dots = document.querySelectorAll('.testimonial-dots .dot');
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          if(dots[i]) {
+            dots[i].classList.remove('active');
+          }
+        });
+        slides[index].classList.add('active');
+        if(dots[index]) {
+          dots[index].classList.add('active');
+        }
+        currentSlide = index;
+      }
+
+      document.getElementById('nextTestimonial').addEventListener('click', function() {
+        let nextSlide = (currentSlide + 1) % slides.length;
+        showSlide(nextSlide);
+      });
+
+      document.getElementById('prevTestimonial').addEventListener('click', function() {
+        let prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prevSlide);
+      });
+
+      // Attach click events to dots if they exist
+      document.querySelectorAll('.testimonial-dots .dot').forEach(dot => {
+        dot.addEventListener('click', function() {
+          let slideIndex = parseInt(this.getAttribute('data-slide'));
+          showSlide(slideIndex);
+        });
+      });
+    });
+  </script>
+
+  <!-- Additional external JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
