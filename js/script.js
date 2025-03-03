@@ -122,7 +122,7 @@ function sendMail() {
         // Send email using mailto:
         const subject = encodeURIComponent("Contact Form Submission");
         const body = encodeURIComponent(`Name: ${name.value}\nEmail: ${email.value}\nMessage:\n${message.value}`);
-        const mailtoLink = `mailto:sahilnalavade25@gmail.com?subject=${subject}&body=${body}`;
+        const mailtoLink = `mailto:rickeypatil.2003@gmail.com?subject=${subject}&body=${body}`;
         window.location.href = mailtoLink;
 
         // Show confirmation message
